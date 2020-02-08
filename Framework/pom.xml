@@ -4,6 +4,12 @@
   <artifactId>Framework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -42,6 +48,39 @@
     <version>3.17</version>
 </dependency>
 
+
+
   </dependencies>
+
+<build>
+<plugins>
+      <plugin>
+        <groupId>org.apache.maven</groupId>
+        <artifactId>maven-plugin-api</artifactId>
+        <version>3.3.9</version>
+      </plugin>
+      
+      <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M4</version>
+                <configuration>
+                    <!-- Suite testng xml file to consider for test execution -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>XMLFiles/testng.xml</suiteXmlFile>
+                        
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+</plugins>
+</build>
 
 </project>
