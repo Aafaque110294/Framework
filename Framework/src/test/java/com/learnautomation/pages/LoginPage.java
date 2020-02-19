@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage {
 	WebDriver driver;
 	//creating constructor to help us to initialize the webdriver
-	public LoginPage(WebDriver ldriver)// pass webdriver reference, it is required otherwise it will not be able to identify the driveres
+	public LoginPage(WebDriver ldriver)// pass webdriver reference, it is required otherwise it will not be able to identify the driver
 	{
 		this.driver= ldriver;
 	}
